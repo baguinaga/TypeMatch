@@ -1,0 +1,23 @@
+{
+  "name": "typematch",
+  "version": "1.0.0",
+  "description": "TypeMatch is a full-stack app that aims to match people based on similat interest and/or personality type.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baguinaga/TypeMatch.git"
+  },
+  "author": "Billy Aguinaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baguinaga/TypeMatch/issues"
+  },
+  "homepage": "https://github.com/baguinaga/TypeMatch#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
