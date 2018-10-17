@@ -7,6 +7,3 @@ const quizData = [
 ];
 
 module.exports = quizData;
-
-
-
