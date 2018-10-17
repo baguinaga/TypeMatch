@@ -9,11 +9,11 @@ module.exports = function(app) {
 
   //quiz(short-form) route
   app.get("/quiz", function(req,res){
-    es.sendFile(path.join(__dirname,"../../public/quiz.html"));
+    res.sendFile(path.join(__dirname,"../../public/quiz.html"));
   });
 
   //404 page, set to home.html
   app.get("*", function(req,res){
-    es.sendFile(path.join(__dirname,"../../public/home.html"));
+    res.sendFile(path.join(__dirname,"../../public/home.html"));
   });
 }

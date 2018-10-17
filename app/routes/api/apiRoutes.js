@@ -1,4 +1,4 @@
-const quizData = require("../../data/quizData.js");
+const quizData = require("../../data/quizData");
 
 module.exports = function(app) {
 
