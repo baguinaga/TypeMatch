@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-  <link rel="stylesheet" href="style.css">
-  <title>TypeMatch</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>TypeMatch Personality Quiz</title>
 </head>
 
 <body>
@@ -20,25 +20,115 @@
     <form>
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" placeholder="John Smith">
+        <input type="text" class="form-control" id="name" placeholder="Billy Aguinaga">
       </div>
       <div class="form-group">
-        <label for="url">Photo:<span id="emailHelp" class="form-text text-muted">(optional)</span></label> 
-        <input type="text" class="form-control" id="urk" placeholder="John Smith">
+        <label for="url">Profile Picture&nbsp;<span id="urlHelp" class="text-muted">(optional)</span>:</label>
+        <input type="text" class="form-control" id="url" placeholder="Photo URL (https://website.com/profile.jpg)">
       </div>
-      <p>Question 1</p>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
-          Default radio
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          Second default radio
-        </label>
-      </div>
+
+      <hr>
+
+      <table class="table table-sm table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Question</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest1_radio1" name="question1" class="custom-control-input">
+                <label class="custom-control-label" for="quest1_radio1">Answer1</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest1_radio2" name="question1" class="custom-control-input">
+                <label class="custom-control-label" for="quest1_radio2">Answer2</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Question</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest2_radio1" name="question2" class="custom-control-input">
+                <label class="custom-control-label" for="quest2_radio1">Answer1</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest2_radio2" name="question2" class="custom-control-input">
+                <label class="custom-control-label" for="quest2_radio2">Answer2</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Question</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest3_radio1" name="question3" class="custom-control-input">
+                <label class="custom-control-label" for="quest3_radio1">Answer1</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest3_radio2" name="question3" class="custom-control-input">
+                <label class="custom-control-label" for="quest3_radio2">Answer2</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Question</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest4_radio1" name="question4" class="custom-control-input">
+                <label class="custom-control-label" for="quest4_radio1">Answer1</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="quest4_radio2" name="question4" class="custom-control-input">
+                <label class="custom-control-label" for="quest4_radio2">Answer2</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </form>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
