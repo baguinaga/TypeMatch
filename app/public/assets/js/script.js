@@ -39,7 +39,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     const radioValues = [];
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 21; i++) {
       const radioInput = $(`input[name='question${i}']:checked`).val()
       radioValues.push(radioInput);
     }
@@ -56,5 +56,5 @@ $(document).ready(function () {
     
     $('#form').trigger("reset");
   });
-    
+
 });
