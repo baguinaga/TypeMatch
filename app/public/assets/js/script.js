@@ -1,38 +1,27 @@
 $(document).ready(function () {
 
   const determineTypeScore = function (array) {
-    typeScore = [0, 0, 0, 0, 0, 0, 0, 0];
+    const typeScore = [0, 0, 0, 0, 0, 0, 0, 0];
+    const typeKey = ["E", "I", "S", "N", "T", "F", "J", "P"]
 
-    array.forEach(element => {
-
-      switch (element) {
-        case "E":
-          typeScore[0]++
-          break;
-        case "I":
-          typeScore[1]++
-          break;
-        case "S":
-          typeScore[2]++
-          break;
-        case "N":
-          typeScore[3]++
-          break;
-        case "T":
-          typeScore[4]++
-          break;
-        case "F":
-          typeScore[5]++
-          break;
-        case "J":
-          typeScore[6]++
-          break;
-        case "P":
-          typeScore[7]++
-          break;
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < typeKey.length; j++) {
+        if (array[i] === typeKey[j]) {
+          typeScore[j]++;
+        }
       }
-    });
+    }
     return typeScore;
+  }
+
+  const determineType = function (array) {
+    const typeKey = ["E", "I", "S", "N", "T", "F", "J", "P"]
+    let mbtiString = "";
+
+    for (let i = 0; i < 7; i += 2) {
+      (array[i] > array[i + 1]) ? mbtiString += typeKey[i]: mbtiString += typeKey[i + 1];
+    }
+    return mbtiString;
   }
 
   $("#form").on("submit", function (event) {
@@ -46,11 +35,13 @@ $(document).ready(function () {
 
     const radioType = determineTypeScore(radioValues);
 
+    // const mbtiType = place here
+
     const userData = {
       name: $("#name").val(),
       photo: $("#url").val(),
       score: radioType,
-      type : "string"
+      type: "string"
     }
 
     console.log(userData);
