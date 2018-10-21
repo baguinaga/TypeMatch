@@ -35,13 +35,13 @@ $(document).ready(function () {
 
     const radioType = determineTypeScore(radioValues);
 
-    // const mbtiType = place here
+    const mbtiType = determineType(radioType);
 
     const userData = {
       name: $("#name").val(),
       photo: $("#url").val(),
       score: radioType,
-      type: "string"
+      type: mbtiType
     }
 
     console.log(userData);
@@ -51,8 +51,8 @@ $(document).ready(function () {
       method: "POST",
       data: userData
     }).then(function (response) {
+      $("#typeModal").modal("show");
       console.log(response);
-      //show modal 
     })
 
     $("#form").trigger("reset");
