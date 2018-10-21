@@ -2,9 +2,9 @@ $(document).ready(function () {
 
   const determineTypeScore = function (array) {
     typeScore = [0, 0, 0, 0, 0, 0, 0, 0];
-  
+
     array.forEach(element => {
-  
+
       switch (element) {
         case "E":
           typeScore[0]++
@@ -49,12 +49,21 @@ $(document).ready(function () {
     const userData = {
       name: $("#name").val(),
       photo: $("#url").val(),
-      score: radioType
+      score: radioType,
+      type : "string"
     }
 
     console.log(userData);
-    
-    $('#form').trigger("reset");
-  });
 
+    $.ajax({
+      url: "/api/quiz",
+      method: "POST",
+      data: userData
+    }).then(function (response) {
+      console.log(response);
+      //show modal 
+    })
+
+    $("#form").trigger("reset");
+  });
 });

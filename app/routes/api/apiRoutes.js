@@ -12,6 +12,7 @@ module.exports = function(app) {
     const newUser = req.body;
     quizData.push(newUser);
     // api call response/ logic
+    // send back type and or closest match
     res.json(newUser)
   });
 }
