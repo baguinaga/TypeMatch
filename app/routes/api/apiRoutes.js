@@ -12,16 +12,22 @@ module.exports = function(app) {
   app.post("/api/quiz", function(req, res) {
     const newUser = req.body;
 
-    const userMatch = () => {
-      userStd = []
+    const userMatch = (newUser) => {
+      const difference = []
       quizData.forEach(user => {
-        userStd.push(user.score, newUser.score)
+        let scoreDiff = 0;
+        for(let i = 0 ; i < 8 ; i++) {
+          scoreDiff += Math.abs(user.score[i] - newUser.score[i]);
+        }
+        difference.push(scoreDiff);
       });
-      return quizData[Math.min(userStd)];
+      lowestDiff = difference.indexOf(Math.min(...difference));
+      return quizData[lowestDiff];
     }
 
+    const match = userMatch(newUser);
+
     quizData.push(newUser);
-    // send back type and or closest match
-    res.json(newUser)
+    res.json(match);
   });
 }

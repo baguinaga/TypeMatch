@@ -52,7 +52,6 @@ $(document).ready(function () {
       data: userData
     }).then(function (response) {
       $("#typeModal").modal("show");
-      // testing response from route
       console.log(response); 
     })
 
