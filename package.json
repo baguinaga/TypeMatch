@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/baguinaga/TypeMatch#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mathjs": "^5.2.1"
   }
 }
