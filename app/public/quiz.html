@@ -387,14 +387,8 @@
       <button type="submit" class="btn btn-outline-success btn-lg btn-submit float-right">Get Matched!</button>
     </form>
 
-    <!-- Modal Button (for testing purposes) -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#typeModal">
-        Launch demo modal
-      </button>
-
     <!-- Modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="typeModalLabel"
-      aria-hidden="true" id="typeModal">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="typeModalLabel" aria-hidden="true" id="typeModal">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -404,13 +398,12 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <img src="" class="col rounded mx-auto d-block" alt="matchImage">
-              </div>
-                <h2>Your match:</h2>
-                <h3 id="matchName">Name:</h3>
-                <h3 id="matchType">Type:</h3>
+            <div class="container-fluid body-modal">
+              <img class="img-modal" src="" class="col rounded mx-auto d-block" alt="matchImage" id="matchImage">
+
+              <h2>Your match:</h2>
+              <h3 id="matchName">Name:</h3>
+              <h3 id="matchType">Type:</h3>
             </div>
           </div>
         </div>

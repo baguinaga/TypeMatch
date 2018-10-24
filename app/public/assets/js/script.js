@@ -37,6 +37,8 @@ $(document).ready(function () {
 
     const mbtiType = determineType(radioType);
 
+    $("#type").text(mbtiType);
+
     const userData = {
       name: $("#name").val(),
       photo: $("#url").val(),
@@ -51,6 +53,9 @@ $(document).ready(function () {
       method: "POST",
       data: userData
     }).then(function (response) {
+      $("#matchImage").attr("src", response.url);
+      $("#matchName").text(response.name);
+      $("#matchType").text(response.type);
       $("#typeModal").modal("show");
       console.log(response); 
     })
