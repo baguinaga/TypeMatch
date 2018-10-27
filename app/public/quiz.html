@@ -8,21 +8,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>TypeMatch Personality Quiz</title>
+  <title>TypeMatch Personality Test</title>
 </head>
 
-<body>
+<body id="quiz">
+
   <div class="container">
 
     <!-- Header Hero Banner -->
-    <div class="jumbotron">
+    <div class="bg-instructions">
       <h1 class="display-4">Instructions</h1>
-      <p class="lead">Quiz Instructions. Placeholder.</p>
+      <p class="lead">Please fill out the form below so that we may save your results and match you with other users.
+        <br/>
+        There are no right or wrong answers to this test. So choose the response that best matches your behavior.</p>
     </div>
 
     <!-- Form -->
     <form id="form">
-      <div class="form-row">
+      <div class="form-row form-head my-4">
         <div class="col form-group">
           <label for="name">Name:</label>
           <input type="text" class="form-control" id="name" placeholder="Billy Aguinaga" required>
@@ -39,7 +42,7 @@
 
       <!-- Table 1 -->
       <table class="table table-sm table-hover table-bordered">
-        <thead class="thead-light">
+        <thead class="thead-dark">
           <tr>
             <th scope="col">When making a phone call do you:</th>
             <th scope="col">Is it worse to:</th>
@@ -108,7 +111,7 @@
           </tr>
 
           <!-- Table 2 -->
-          <thead class="thead-light">
+          <thead class="thead-dark">
             <tr>
               <th scope="col">At parties do you:</th>
               <th scope="col">Are you more interested in:</th>
@@ -174,7 +177,7 @@
           </tr>
 
           <!-- Table 3 -->
-          <thead class="thead-light">
+          <thead class="thead-dark">
             <tr>
               <th scope="col">In company do you:</th>
               <th scope="col">Do you feel:</th>
@@ -243,7 +246,7 @@
           </tr>
 
           <!-- Table 4 -->
-          <thead class="thead-light">
+          <thead class="thead-dark">
             <tr>
               <th scope="col">Do you prefer:</th>
               <th scope="col">Are you more interested in:</th>
@@ -313,7 +316,7 @@
           </tr>
 
           <!-- Table 5 -->
-          <thead class="thead-light">
+          <thead class="thead-dark">
             <tr>
               <th scope="col">When the phone rings do you:</th>
               <th scope="col">Are you more frequently:</th>
@@ -392,7 +395,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title">Your Personality Type:<span id="type">INTJ</span></h2>
+            <h2 class="modal-title">Your Personality Type:<span id="type">INTJ</span>!</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -401,9 +404,12 @@
             <div class="container-fluid body-modal">
               <img class="img-modal" src="" class="col rounded mx-auto d-block" alt="matchImage" id="matchImage">
 
-              <h2>Your match:</h2>
-              <h3 id="matchName">Name:</h3>
-              <h3 id="matchType">Type:</h3>
+              <div class="matchDiv">
+                <h2>You have been matched with:</h2>    
+                <h3 id="matchName"></h3>
+                <h3 id="matchType">Type:</h3>
+                <p>Description about user type and match's personality.</p>
+              </div>
             </div>
           </div>
         </div>

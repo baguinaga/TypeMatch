@@ -1,4 +1,3 @@
-//E: 40% , I: 60% : S: 30%, N: 70% : T:65%, F: 35% : J: 70%, P: 30%
 const quizData = [{
   name: "Billy Aguinaga",
   url: "/assets/images/notReallyMe.jpg",
